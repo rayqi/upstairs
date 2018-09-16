@@ -16,8 +16,7 @@ const Food = require('./food')
  * instead of: const User = require('../db/models/user')
  */
 
-User.hasMany(Food)
-User.hasMany(Drinks)
+
 module.exports = {
   User, Drinks, Food
 }
