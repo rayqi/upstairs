@@ -12,6 +12,16 @@ export const getFood = food => (
     }
 )
 
+//thunks
+
+export const getAllFoodThunk = () => {
+    return dispatch => {
+        axios
+            .get('/api/food')
+            .then(res => dispatch(getFood(res.data)))
+            .catch(err => console.error('could not find', err))
+    }
+}
 
 //reducer
 const reducer = (state = [], action) => {
@@ -25,14 +35,3 @@ const reducer = (state = [], action) => {
 
 export default reducer;
 
-//thunks
-
-export const getAllFoodThunk = () => {
-    console.log('thunking?')
-    return dispatch => {
-        axios
-            .get('/api/food')
-            .then(res => dispatch(getFood(res.data)))
-            .catch(err => console.error('could not find', err))
-    }
-}

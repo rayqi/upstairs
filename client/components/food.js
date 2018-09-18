@@ -1,13 +1,11 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import getAllFoodThunk from '../store/food'
+import { getAllFoodThunk } from '../store/food'
 
 class Food extends Component {
     constructor(props) {
         super(props)
-        this.state = {
 
-        }
 
     }
 
@@ -17,10 +15,14 @@ class Food extends Component {
     }
 
     render() {
-        console.log('props', this.props)
+        const listFood = this.props.food
+        console.log(listFood)
         return (
             <div>
                 <h1>ALL FOOD</h1>
+                {listFood.length > 0 ? listFood.map((item) => {
+                    return (<li key={item.id}>{item.name}</li>)
+                }) : 'We need you in the kitchen while we work out our new menu.'}
             </div>
         )
     }

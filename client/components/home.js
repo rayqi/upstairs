@@ -6,12 +6,8 @@ class Home extends Component {
     constructor(props) {
         super(props)
     }
-    componentDidMount() {
-        console.log('CDM says hello!!!!')
-    }
 
     render() {
-        console.log('home was hit')
         return (
             <div>
                 <h1>UPSTAIRS HOMEPAGE</h1>

@@ -10,6 +10,18 @@ router.get('/', (req, res, next) => {
         .catch(next)
 })
 
+router.get('/:id', (req, res, next) => {
+    Food.findOne(
+        {
+            where:
+                { id: req.params.id }
+        }
+    )
+        .then(singleFood => res.json(singleFood))
+        .catch(next)
+
+})
+
 // router.get('/', async = () => {
 //     try {
 //         const food = await Food.findAll()
