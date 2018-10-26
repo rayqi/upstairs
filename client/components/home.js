@@ -9,10 +9,9 @@ class Home extends Component {
 
     render() {
         return (
-            <div>
-                <h1>UPSTAIRS HOMEPAGE</h1>
-                <h3>located in Chinatown</h3>
-                <img src="https://cdn.thecoolist.com/wp-content/uploads/2010/09/pio-pio-restaurant_sebastian-marsical-studio_1.jpg" />
+            <div className='home_container'>
+                <h1 id='title'>UPSTAIRS</h1>
+                <img className='mainImage' src="https://cdn.thecoolist.com/wp-content/uploads/2010/09/pio-pio-restaurant_sebastian-marsical-studio_1.jpg" />
             </div>
         )
     }

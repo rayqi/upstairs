@@ -9,16 +9,16 @@ class Menu extends Component {
     }
 
     render() {
-        return <div>
+        return <div className='menu_container'>
             <h1>MENU</h1>
-            <div>
-                <Link to="/menu/food">
-                    <img src="http://blogs-images.forbes.com/halrubenstein/files/2016/12/Cookshop-1200x675.jpg" />
+            <div className='menu_img'>
+                <Link className='menu_link' to="/menu/food">
+                    <img className='menu_link_img' src="http://blogs-images.forbes.com/halrubenstein/files/2016/12/Cookshop-1200x675.jpg" />
                 </Link>
             </div>
-            <div>
-                <Link to="/drinks">
-                    <img src="https://punchdrink.com/wp-content/uploads/2015/12/slide-mountain-wide.jpg" /></Link>
+            <div className='menu_img'>
+                <Link className='menu_link' to="/drinks">
+                    <img className='menu_link_img' src="https://punchdrink.com/wp-content/uploads/2015/12/slide-mountain-wide.jpg" /></Link>
             </div>
         </div>
 
